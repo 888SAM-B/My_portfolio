@@ -1,0 +1,25 @@
+:root {
+  --dark1-color: #222831;
+  --dark2-color: #393E46;
+  --dark3-color: #948979;
+  --dark4-color: #DFD0B8;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--dark1-color);
+  color: var(--dark4-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h3{
+  color: var(--dark3-color);
+}
+button{
+  background-color: var(--dark2-color);
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  color: aliceblue;
+}
