@@ -9,6 +9,8 @@ const nav = () => {
             <div className="right">
                 <li>Projects</li>
                 <li>Skills</li>
+                <li>Certifications</li>
+                <li>Achievements</li>
                 <li>Resume</li>
                 <li>Contact</li>
             </div>
