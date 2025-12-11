@@ -2,7 +2,9 @@ import React from 'react'
 import { Typewriter } from "react-simple-typewriter";
 const herosection = () => {
   return (
+    
     <>
+    <div className="hero">
         <h1>Hello 👋 , I'm B Sam</h1>
       <h2>
         <Typewriter
@@ -21,6 +23,7 @@ const herosection = () => {
         />
       </h2>
       <button onClick={() => window.scrollTo({ top: document.getElementById("projects").offsetTop, behavior: "smooth" })}>See My Work</button>
+      </div>
     </>
   )
 }

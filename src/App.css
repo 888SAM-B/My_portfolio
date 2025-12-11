@@ -23,3 +23,31 @@ button{
   border-radius: 7px;
   color: aliceblue;
 }
+.nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:20px;
+}
+.nav .left{
+  width:30%;
+}
+.nav .right{
+  display: flex;  
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  width:100%
+}
+.nav .right li{
+ cursor: pointer; 
+}
+.hero{
+  border:1px solid ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}

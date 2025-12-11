@@ -3,6 +3,7 @@ import React from 'react'
 const nav = () => {
     return (
         <>
+        <div className="nav">
             <div className="left">
                 <h1>Portfolio</h1>
             </div>
@@ -13,6 +14,7 @@ const nav = () => {
                 <li>Achievements</li>
                 <li>Resume</li>
                 <li>Contact</li>
+            </div>
             </div>
         </>
     )
