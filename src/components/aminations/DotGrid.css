@@ -4,7 +4,10 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  
+  opacity: 0.55;
+  z-index: -1;
 }
 
 .dot-grid__wrap {

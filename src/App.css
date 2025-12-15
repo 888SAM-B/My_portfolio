@@ -49,7 +49,8 @@ button{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:80vh;
+  height:100%;
+  text-align: center;
 }
 .work{
   position: relative;
@@ -58,9 +59,53 @@ button{
 .name{
   font-size: 50px;
   font-weight: 700;
+  text-align: center !important;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero h2{
   font-size:35px
+}
+.proj-img{
+  width:300px;
+  height:200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.project-cards{
+  display: flex;
+  width: 300px;
+  /* height: 350px; */
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
+}
+.all-projects{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+  /* gap:30px; */
+  flex-wrap: wrap;
+  margin-top:50px;
+}
+.explore{
+  margin-bottom: 10px;
+  width: 100px;
+}
+@media screen and (max-width:500px) { 
+  .hero h2{
+    font-size:25px
+  }
+  .hero{
+    /* height: 0vh; */
+    border: 1px solid;
+  }
+  
 }
 *{
   /* border:1px solid  */
