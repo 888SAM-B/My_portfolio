@@ -3,7 +3,7 @@ import React from 'react'
 const skills = () => {
   return (
     <>
-        <h2 className='skill-start'>Skills Section</h2>
+        <h2 className='skill-start'>Skills </h2>
         <div className="skills">
             <div className="list">
                 <div className="list-title">
