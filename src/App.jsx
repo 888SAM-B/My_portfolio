@@ -6,11 +6,14 @@ import Skills from './components/skills';
 import Achievements from './components/achievements';
 import Certifications from './components/certifications';
 import Contact from './components/contact';
+import Footer from './components/footer';
+import ScrollStack, { ScrollStackItem } from './components/aminations/ScrollStack';
+
 import './App.css'
 
 function App() {
   return (
-    <>
+    <div className="App">
      <nav>
       <Nav/>
      </nav>
@@ -32,7 +35,10 @@ function App() {
       <div className="contact">
         <Contact/>
       </div>
-    </>
+      <footer className='foot'>
+        <Footer/>
+      </footer>
+    </div>
   )
 }
 

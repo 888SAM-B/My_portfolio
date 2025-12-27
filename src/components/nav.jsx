@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
-
+import resume from "../assets/sam-resume.pdf";
 const Nav = () => {
     const [open, setOpen] = useState(false);
 
@@ -36,7 +36,7 @@ const Nav = () => {
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#resume">Resume</a></li>
+                    <li><a href={resume} target="_blank">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
