@@ -24,8 +24,7 @@ const skills = () => {
                 </div>
                 <div className="list-items">
                     <ul>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
+                        <li>Node.js + Express.js </li>
                         <li>Python</li>
                         <li>MongoDB</li>
                         <li>SQL</li>
