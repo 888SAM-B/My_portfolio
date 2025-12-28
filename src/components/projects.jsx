@@ -35,7 +35,7 @@ const projectList = [
         description: 'A Student Management System for managing student data',
         img: sms,
         hoverImg: sms1,
-        url: 'https://student-managemnt-systems.netlify.app/'
+        url: 'https://dyc-student-management.netlify.app'
     },
     {
         id: 4,
@@ -85,3 +85,4 @@ const Projects = () => {
 }
 
 export default Projects
+
