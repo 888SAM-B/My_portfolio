@@ -406,7 +406,7 @@ br{
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .pop-up p {
@@ -469,7 +469,11 @@ br{
     flex-direction: column;
     gap: 30px;
   }
-
+  .pop-up {
+    width: 90%;
+    padding: 30px 20px;
+    line-height: 1.7;
+  }
 }
 @media screen and (max-width:350px) {
   .list-title{
