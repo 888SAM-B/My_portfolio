@@ -143,15 +143,16 @@ button {
 .list-skill {
   
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 20px 0px 20px 0px;
   width: 350px ;
   display: flex;
+  border: 1px solid;
   flex-direction: column;
   /* align-items: center; */
   height: 295px;
   list-style: none;
   cursor: pointer;
-  border: none !important;
+  
 }
 
 .list-items ul {
@@ -164,7 +165,7 @@ button {
 }
 
 .list-title {
-  width: 280px;
+  width: 90%;
   margin: 10px auto;
   text-align:center;
   border: 1px solid;
@@ -477,7 +478,7 @@ br{
 }
 @media screen and (max-width:350px) {
   .list-title{
-    width: 250px !important;
+    width: 90% !important;
   }
   
 }

@@ -24,14 +24,6 @@ const skills = () => {
             <h2 className='skill-start'>Skills </h2>
             <div className="skills">
                 {skillsData.map((skill, index) => (
-                    <ElectricBorder
-                        key={index}
-                        color="#DFD0B8"
-                        speed={1}
-                        chaos={0.5}
-                        thickness={2}
-                        style={{ borderRadius: 16 }}
-                    >
                         <div className="list-skill">
                             <div className="list-title">
                                 <h2>{skill.title}</h2>
@@ -44,7 +36,7 @@ const skills = () => {
                                 </ul>
                             </div>
                         </div>
-                    </ElectricBorder>
+                    
                 ))}
             </div>
         </>
