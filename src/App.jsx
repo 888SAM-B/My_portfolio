@@ -35,8 +35,11 @@ function App() {
       <div className="contact">
         <Contact/>
       </div>
-      <footer className='foot'>
+      <div className='foot'>
         <Footer/>
+      </div>
+      <footer>
+        <h3 className='des' >Designed & Developed by Sam B © 2025</h3>
       </footer>
     </div>
   )

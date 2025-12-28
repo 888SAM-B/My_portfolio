@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
             
-            <h3 className='des' >Designed & Built by Sam B © 2025</h3>
+            
             
         </>
     )
