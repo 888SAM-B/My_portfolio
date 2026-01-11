@@ -10,7 +10,7 @@ import quiz from '../assets/pro-images/5.jpg'
 import quiz1 from '../assets/pro-images/6.jpg'
 import weather from '../assets/pro-images/9.jpg'
 import weather1 from '../assets/pro-images/10.jpg'
-import './Projects.css'; // Import your CSS file
+import './Projects.css'; // Import your CSS file    
 
 const projectList = [
     {
