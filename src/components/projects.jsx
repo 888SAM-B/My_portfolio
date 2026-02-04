@@ -61,7 +61,7 @@ const Projects = () => {
 
     return (
         <>
-            <h1 className='my-works'>My Works</h1>
+            <h2 className='my-works'>My Works</h2>
             <div className="all-projects">
                 {projectList.map(project => (
                     <div

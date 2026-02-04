@@ -37,6 +37,7 @@ const herosection = () => {
             direction="top"
             onAnimationComplete={handleAnimationComplete}
             className="name"
+            tagName="h1"
           />
 
           <h2>
@@ -65,8 +66,8 @@ const herosection = () => {
         </div>
       </div>
 
-      <div 
-        className={`pop-container ${displayPopUp ? 'show' : 'hide'}`} 
+      <div
+        className={`pop-container ${displayPopUp ? 'show' : 'hide'}`}
         onClick={() => setDisplayPopUp(false)}
       >
         <div className="pop-up" onClick={(e) => e.stopPropagation()}>

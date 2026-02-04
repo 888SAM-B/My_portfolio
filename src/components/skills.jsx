@@ -14,7 +14,7 @@ const skills = () => {
         },
         {
             title: "Tools & Platforms",
-            items: ["GitHub",  "VS Code", "Pycharm","MS Office"]
+            items: ["GitHub", "VS Code", "Pycharm", "MS Office"]
         }
     ];
 
@@ -24,19 +24,19 @@ const skills = () => {
             <h2 className='skill-start'>Skills </h2>
             <div className="skills">
                 {skillsData.map((skill, index) => (
-                        <div className="list-skill">
-                            <div className="list-title">
-                                <h2>{skill.title}</h2>
-                            </div>
-                            <div className="list-items">
-                                <ul>
-                                    {skill.items.map((item, idx) => (
-                                        <li key={idx}>{item}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                    <div className="list-skill">
+                        <div className="list-title">
+                            <h3>{skill.title}</h3>
                         </div>
-                    
+                        <div className="list-items">
+                            <ul>
+                                {skill.items.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
                 ))}
             </div>
         </>
