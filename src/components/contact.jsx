@@ -1,80 +1,89 @@
-import React from "react";
-import emailjs from "@emailjs/browser";
-import { a } from "motion/react-client";
-
+import React, { useState } from "react";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleMailSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+    setIsSubmitting(true);
+    setResult("Sending message...");
+    
+    try {
+      const formData = new FormData(event.target);
+      formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-    const data = await response.json();
-    if (data.success) {
-      setResult("Mail Sent Successfully");
-      
-    } else {
-      setResult("Error");
+      const data = await response.json();
+      if (data.success) {
+        setResult("✓ Message sent successfully! I'll get back to you soon.");
+        event.target.reset();
+      } else {
+        setResult("✕ Failed to send message. Please try again or email directly.");
+      }
+    } catch {
+      setResult("✕ Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <>
-      <h2>Contact</h2>
+    <div className="section-block">
+      <div className="section-header">
+        <h2 className="section-title">Contact</h2>
+        <p className="section-subtitle">Have a question or want to work together? Send a message!</p>
+      </div>
 
-      <div className="contact-container">
-        <form onSubmit={handleMailSubmit}>
-          
-          <div className="form">
-
-            <div className="one">
-              <div className="contact-block">
-                <label htmlFor="cname">Name :</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="cname"
-                  required
-                />
-              </div>
-
-              <div className="contact-block">
-                <label htmlFor="cmail">Mail :</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="cmail"
-                  required
-                />
-              </div>
+      <div className="contact-card">
+        <form onSubmit={handleMailSubmit} className="contact-form">
+          <div className="form-grid">
+            <div className="form-group">
+              <label htmlFor="cname">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="cname"
+                placeholder="Your Name"
+                required
+              />
             </div>
 
-            <div className="two">
-              <div className="contact-block">
-                <label htmlFor="comments">Comments :</label>
-                <textarea
-                  name="message"
-                  id="comments"
-                  required
-                />
-              </div>
+            <div className="form-group">
+              <label htmlFor="cmail">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="cmail"
+                placeholder="your.email@example.com"
+                required
+              />
             </div>
 
+            <div className="form-group full-width">
+              <label htmlFor="comments">Message</label>
+              <textarea
+                name="message"
+                id="comments"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              />
+            </div>
           </div>
 
-          <button type="submit" value="Submit" className="submit-btn" >Submit</button>
-          <br />
-          <span>{result}</span>
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+          
+          {result && <p className="form-status">{result}</p>}
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

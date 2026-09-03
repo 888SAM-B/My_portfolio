@@ -32,12 +32,12 @@ const Nav = () => {
                 </button>
 
                 <ul className={`right ${open ? "open" : ""}`}>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href={resume} target="_blank">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#projects" onClick={() => setOpen(false)}>Projects</a></li>
+                    <li><a href="#skills" onClick={() => setOpen(false)}>Skills</a></li>
+                    <li><a href="#certifications" onClick={() => setOpen(false)}>Certifications</a></li>
+                    <li><a href="#achievements" onClick={() => setOpen(false)}>Achievements</a></li>
+                    <li><a href={resume} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Resume</a></li>
+                    <li><a href="#contact" onClick={() => setOpen(false)}>Contact</a></li>
                 </ul>
             </div>
         </nav>

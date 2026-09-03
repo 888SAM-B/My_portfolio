@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Nav from './components/nav';
 import Herosection from './components/herosection';
 import Projects from './components/projects';
@@ -7,42 +6,39 @@ import Achievements from './components/achievements';
 import Certifications from './components/certifications';
 import Contact from './components/contact';
 import Footer from './components/footer';
-import ScrollStack, { ScrollStackItem } from './components/aminations/ScrollStack';
 
-import './App.css'
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <nav>
-      <Nav/>
-     </nav>
-     <div id="mainContent">
-      <Herosection /> 
-     </div>
-     <div id="projects">
-      <Projects />
-     </div>
-      <div id="skills">
+      <Nav />
+      <div id="mainContent">
+        <Herosection />
+      </div>
+      <section id="projects" className="section-container">
+        <Projects />
+      </section>
+      <section id="skills" className="section-container">
         <Skills />
-      </div>
-      <div id="certifications">
+      </section>
+      <section id="certifications" className="section-container">
         <Certifications />
-      </div>
-      <div id="achievements">
+      </section>
+      <section id="achievements" className="section-container">
         <Achievements />
-      </div>
-      <div className="contact">
-        <Contact/>
-      </div>
-      <div className='foot'>
-        <Footer/>
+      </section>
+      <section id="contact" className="section-container">
+        <Contact />
+      </section>
+      <div className="foot-wrapper">
+        <Footer />
       </div>
       <footer>
-        <h3 className='des' >Designed & Developed by Sam B © 2025</h3>
+        <p className="des">Designed & Developed by Sam B © 2025</p>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

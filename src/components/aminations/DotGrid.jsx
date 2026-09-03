@@ -30,7 +30,7 @@ function hexToRgb(hex) {
 
 const DotGrid = ({
   dotSize = 12,
-  gap = 300,
+  gap = 360,
   baseColor = '#DFD0B8',
   activeColor = '#dfd0b8ff',
   proximity = 150,
@@ -107,6 +107,20 @@ const DotGrid = ({
     dotsRef.current = dots;
   }, [dotSize, gap]);
 
+  const isVisibleRef = useRef(true);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(wrapperRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     if (!circlePath) return;
 
@@ -114,6 +128,11 @@ const DotGrid = ({
     const proxSq = proximity * proximity;
 
     const draw = () => {
+      if (!isVisibleRef.current) {
+        rafId = requestAnimationFrame(draw);
+        return;
+      }
+
       const canvas = canvasRef.current;
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
@@ -170,6 +189,7 @@ const DotGrid = ({
 
   useEffect(() => {
     const onMove = e => {
+      if (!isVisibleRef.current) return;
       const now = performance.now();
       const pr = pointerRef.current;
       const dt = pr.lastTime ? now - pr.lastTime : 16;

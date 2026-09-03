@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue, useTransform } from 'motion/react';
 import { useState, useEffect } from 'react';
 import './Stack.css';

@@ -1,47 +1,47 @@
 import React from 'react';
-import ElectricBorder from './aminations/ElectricBorder';
 
-const skills = () => {
-
+const Skills = () => {
     const skillsData = [
         {
             title: "Front-End Tech",
-            items: ["React", "JavaScript", "CSS", "HTML"]
+            icon: "💻",
+            items: ["React", "JavaScript", "HTML5", "CSS3", "Responsive UI"]
         },
         {
             title: "Back-End Tech",
-            items: ["Node.js + Express.js", "Python", "MongoDB", "SQL"]
+            icon: "  ",
+            items: ["Node.js", "Express.js", "Python", "MongoDB", "SQL / MySQL"]
         },
         {
             title: "Tools & Platforms",
-            items: ["GitHub", "VS Code", "Pycharm", "MS Office"]
+            icon: " ",
+            items: ["GitHub", "VS Code", "Postman", "PyCharm", "Netlify / Vercel"]
         }
     ];
 
-
     return (
-        <>
-            <h2 className='skill-start'>Skills </h2>
-            <div className="skills">
+        <div className="section-block">
+            <div className="section-header">
+                <h2 className="section-title">Skills & Technologies</h2>
+                <p className="section-subtitle">Core technical stack and tools I use to build scalable products</p>
+            </div>
+            <div className="skills-grid">
                 {skillsData.map((skill, index) => (
-                    <div className="list-skill">
-                        <div className="list-title">
+                    <div className="skill-card" key={index}>
+                        <div className="skill-card-header">
+                            <span className="skill-icon">{skill.icon}</span>
                             <h3>{skill.title}</h3>
                         </div>
-                        <div className="list-items">
-                            <ul>
-                                {skill.items.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
-                                ))}
-                            </ul>
+                        <div className="skill-badges">
+                            {skill.items.map((item, idx) => (
+                                <span className="skill-badge" key={idx}>{item}</span>
+                            ))}
                         </div>
                     </div>
-
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
-
-export default skills;
+export default Skills;
